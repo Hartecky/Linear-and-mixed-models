@@ -1,6 +1,6 @@
-### MAIN CORELATIONS SCRIPT
+### Main corelations script
 
-### PEARSONS CORELATION
+### Pearson
 pearson = function(x,y) {
   n=length(x)
   mX=mean(x)
@@ -12,7 +12,7 @@ pearson = function(x,y) {
   list(R=R, p=p)
 }
 
-### SPEARMANS CORELATION
+### Spearman
 spearman=function(x,y) {
   rangi=function(x) {
     n=length(x)
@@ -51,7 +51,7 @@ spearman=function(x,y) {
   list(Rs=Rs, p=p)
 }
 
-### KENDALLS-TAU CORELATION
+### Kendalls-Tau
 kendall = function(x,y){
   zgodny = 0
   niezgodny = 0
@@ -67,7 +67,7 @@ kendall = function(x,y){
   return(corelation)
 }
 
-### MAIN FUNCTION
+### Main functions, based on method argument
 
 corelations = function(x,y,method){
   if (length(x)!=length(y)) {
@@ -86,7 +86,7 @@ corelations = function(x,y,method){
 }
 
 
-#TESTING VECTORS
+### Testing vectors
 X = as.numeric(seq(1:10))
 Y = c(2,4,5,7,9,8,1,3,6,10)
 Z = c(1,7,4,3,2,6,7,8)
